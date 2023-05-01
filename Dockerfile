@@ -2,7 +2,7 @@ FROM node:14
 RUN apt-get update
 RUN apt-get install -y curl dirmngr apt-transport-https lsb-release ca-certificates
 RUN curl -sL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-RUN bash nodesource_setup.sh
+#RUN bash nodesource_setup.sh
 RUN apt-get install nodejs -y
 
 WORKDIR /usr/src/app
