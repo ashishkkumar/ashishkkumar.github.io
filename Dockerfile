@@ -1,9 +1,9 @@
 FROM node:14
 
-RUN apt-get install curl -y
+RUN yum install curl -y
 RUN curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
-RUN apt install nodejs -y
+RUN yum install nodejs -y
 
 WORKDIR /usr/src/app
 COPY package*.json ./
